@@ -50,22 +50,28 @@
 
                             <span class="link-text">Alunos</span>
                         </a>
+                        <a href="{{ route('ads.professor') }}" class="nav-link">
+
+                            <span class="link-text">Professor</span>
+                        </a>
                     </li>
                 @endif
+                @if($current == 'prof')
                 <li class="nav-item">
                     <a href="#" class="nav-link">
 
                         <span class="link-text">Professores</span>
                     </a>
                 </li>
-
+                @endif
+                @if($current  == 'cursos')
                 <li class="nav-item">
                     <a href="#" class="nav-link">
 
                         <span class="link-text">Cursos</span>
                     </a>
                 </li>
-
+                @endif
 
                 <li class="nav-item" id="themeButton">
                     <a href="#" class="nav-link">

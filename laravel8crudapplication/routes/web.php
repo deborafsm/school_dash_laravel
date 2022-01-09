@@ -15,8 +15,9 @@ use App\Http\Controllers\View;
 |
 */
 
-Route::get('/alunos',[View::class, 'viewMenu'])->name('ads.aluno');
 Route::get('/',[View::class, 'viewMenu'])->name('ads.aluno');
+// Route::get('/alunos',[View::class, 'viewMenu'])->name('ads.aluno');
+Route::get('/professores',[View::class, 'viewProf'])->name('ads.professor');
 // Route::get('/', function () {
 //     return view('index');
 // });
