@@ -22,7 +22,6 @@
 
     <div class="header"></div>
     <div class="conteudos">
-
         <nav class="navbar">
             <ul class="navbar-nav">
 
@@ -54,23 +53,26 @@
 
                             <span class="link-text">Professor</span>
                         </a>
+                        <a href="{{ route('ads.listAluno') }} " class="nav-link">
+                            <span class="link-text">Lista Alunos</span>
+                        </a>
                     </li>
                 @endif
-                @if($current == 'prof')
-                <li class="nav-item">
-                    <a href="#" class="nav-link">
+                @if ($current == 'prof')
+                    <li class="nav-item">
+                        <a href="#" class="nav-link">
 
-                        <span class="link-text">Professores</span>
-                    </a>
-                </li>
+                            <span class="link-text">Professores</span>
+                        </a>
+                    </li>
                 @endif
-                @if($current  == 'cursos')
-                <li class="nav-item">
-                    <a href="#" class="nav-link">
+                @if ($current == 'cursos')
+                    <li class="nav-item">
+                        <a href="#" class="nav-link">
 
-                        <span class="link-text">Cursos</span>
-                    </a>
-                </li>
+                            <span class="link-text">Cursos</span>
+                        </a>
+                    </li>
                 @endif
 
                 <li class="nav-item" id="themeButton">
@@ -81,7 +83,16 @@
 
         </nav>
         <div class="conteudos_internos">
-
+            <div class="nav_menu_allPages">
+                @if ($current == 'menu')
+                    <h5>Alunos</h5>
+                    <div class="title"></div>
+                @endif
+                @if ($current == 'professor')
+                    <h5>Professores</h5>
+                    <div class="title"></div>
+                @endif
+            </div>
             @yield('content')
         </div>
 

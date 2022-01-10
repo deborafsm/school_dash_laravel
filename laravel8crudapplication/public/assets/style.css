@@ -16,8 +16,8 @@
     font-family: 'Open Sans';
     --text-primary: #b6b6b6;
     --text-secondary: #ececec;
-    --bg-primary: #23232e;
-    --bg-secondary: #141418;
+    --bg-primary: #ececec;
+    --bg-secondary: #cacae2;
     --transition-speed: 600ms;
   }
   
@@ -266,4 +266,28 @@
 
 h4{
     color: white;
+}
+.title
+{
+    width: 100%;
+    align-items: center;
+    margin-top: 5px;
+    margin-left: 50%;
+    height: 5px;
+    border-radius: 25px;
+   
+}
+.nav_menu_allPages
+{
+    padding: 20px;
+    width: 60%;
+
+}
+.nav_menu_allPages h5
+{
+    margin-bottom: 0;
+    margin-left: 70%;
+    
+    width: 330px;
+
 }

@@ -9,15 +9,14 @@ class Alunos extends Controller
 {
     public function newAluno(Request $request)
     {
-        $nome_aluno = $request->nome;
+        $nome_aluno = $request->nome_aluno;
         $data_nascimento = $request->data_nascimento;
         $cpf = $request->cpf;
         $rg = $request->rg;
         $telefone = $request->telefone;
         $curso = $request->curso;
 
-        DB::insert(
-            "INSERT INTO aluno (nome_aluno, data_nascimento, cpf, rg, telefone, curso) 
+        DB::insert("INSERT INTO aluno (nome_aluno, data_nascimento, cpf, rg, telefone, curso) 
         VALUE(:nome_aluno, :data_nascimento, :cpf, :rg, :telefone, :curso)",
             [
                 'nome_aluno' => $nome_aluno,
@@ -34,5 +33,15 @@ class Alunos extends Controller
         ];
 
         return json_encode($msg);
+    }
+
+    public function getAluno(Request $request)
+    {
+        
+        $res = DB::select('select * from aluno');
+        return json_encode($res);
+       
+
+
     }
 }

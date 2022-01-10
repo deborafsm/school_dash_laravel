@@ -20,3 +20,4 @@ Route::middleware('auth:sanctum')->get('/user', function (Request $request) {
 
 // Aluno
 Route::post('/newAluno', [Alunos::class, 'newAluno'])->name('ads.api.newAluno');
+Route::get('/getAluno', [Alunos::class, 'getAluno'])->name('ads.api.allAluno');

@@ -6,10 +6,16 @@ use Illuminate\Http\Request;
 
 class View extends Controller
 {
-    public function viewMenu(){
+    public function viewMenu()
+    {
         return view('Dashboard.Menu.menu');
     }
-    public function viewProf(){
+    public function viewProf()
+    {
         return view('Dashboard.Professor.professor');
+    }
+    public function viewListAluno()
+    {
+        return view('Dashboard.Aluno.lista_aluno');
     }
 }
