@@ -11,7 +11,6 @@
                 <th scope="col" class="font-light text-center align-middle">Telefone</th>
                 <th scope="col" class="font-light text-center align-middle">CURSO</th>
             </tr>
-            
         </thead>
         <tbody id="listAlunos">
         </tbody>

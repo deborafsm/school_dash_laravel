@@ -4,6 +4,7 @@ use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\Api\Alunos\Alunos;
 use App\Http\Controllers\Api\Curso\Curso;
+use App\Http\Controllers\Api\Professor\newProfessor;
 
 
 Route::middleware('auth:sanctum')->get('/user', function (Request $request) {
@@ -14,3 +15,5 @@ Route::middleware('auth:sanctum')->get('/user', function (Request $request) {
 Route::post('/newAluno', [Alunos::class, 'newAluno'])->name('ads.api.newAluno');
 Route::get('/getAluno', [Alunos::class, 'getAluno'])->name('ads.api.allAluno');
 Route::get('/getCursos', [Curso::class, 'getCursos'])->name('ads.api.getCursos');
+// Professores
+Route::post('/newPrf', [newProfessor::class, 'insertProfessor'])->name('ads.api.newprof');

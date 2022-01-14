@@ -1,5 +1,5 @@
 $(function(){
-    getAluno();
+    getAluno()
 })
 // function newAluno() {
 
