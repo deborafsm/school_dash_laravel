@@ -1,5 +1,6 @@
 @extends('Dashboard.template', ['current' => 'listaAlunos'])
 @section('content')
+<a href="{{route('csv')}}"><button class="btn btn-secondary btn-sm ">CSV</button></a>
     <table class="table table-sm table-bordered mt-2 " style="border-radius: 12px">
         <thead class=" grey">
             <tr>

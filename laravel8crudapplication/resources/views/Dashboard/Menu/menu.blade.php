@@ -29,8 +29,9 @@
                         <input id="telefone" name="telefone" type="text" class="validate">
                         <label for="">Telefone</label>
                     </div>
-
                 </div>
+                <select class="form-select" id="curso" aria-label="Default select example">
+                </select>
             </div>
             <button class="btn waves-effect waves-light" type="submit" name="action" onclick="newAluno();">Submit
             </button>
@@ -39,18 +40,16 @@
 
     </div>
 
-    
-    
-    
-    
-    
+
+
+
+
+
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
-    <link href="https://cdn.jsdelivr.net/npm/select2@4.1.0-rc.0/dist/css/select2.min.css" rel="stylesheet" />
+    <script src="https://rawgit.com/select2/select2/master/dist/js/select2.js"></script>
 
     <script src="{{ asset('js/api/Aluno/newAluno.js') }}"></script>
-    <script src="{{ asset('js/api/Aluno/newAluno.js') }}"></script>
     <script src="{{ asset('js/api/Curso/listCursos.js') }}"></script>
-    <script src="{{ asset('js/api/Curso/listCursos.js') }}"></script>
-    @endsection
-    
+  
+@endsection
