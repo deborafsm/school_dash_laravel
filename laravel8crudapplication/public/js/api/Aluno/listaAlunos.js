@@ -1,64 +1,7 @@
-$(function(){
+$(function () {
     getAluno()
 })
-// function newAluno() {
 
-//     let nome_aluno = document.getElementById('nome_aluno').value;
-//     let data_nascimento = document.getElementById('data_nascimento').value;
-//     let cpf = document.getElementById('cpf').value;
-//     let rg = document.getElementById('rg').value;
-//     let telefone = document.getElementById('telefone').value;
-//     let curso = document.getElementById('curso').value;
-//     $.ajax({
-//         method: 'POST',
-//         url: 'http://127.0.0.1:8000/api/newAluno',
-//         data: {
-//             'nome_aluno': nome_aluno,
-//             'data_nascimento': data_nascimento,
-//             'cpf': cpf,
-//             'rg': rg,
-//             'telefone': telefone,
-//             'curso': curso
-//         },
-//         success: function (e) {
-//             getAluno();
-//             let data = JSON.parse(e);
-//             if (data.status == 1) {
-//                 var p = $(`<div class="alert1">
-//                         <span class="closebtn" onclick="this.parentElement.style.display='none';">&times;</span>
-//                         ${data.msg}
-//                         </div>`);
-//                 p.hide()
-//                 $('#Aluno').append(p);
-//                 p.fadeIn(500, function () {
-//                     window.setTimeout(function () {
-//                         p.fadeOut();
-//                     }, 2000)
-//                 });
-//                 document.getElementById('nome_aluno').value = '';
-//                 document.getElementById('data_nascimento').value = '';
-//                 document.getElementById('cpf').value = '';
-//                 document.getElementById('rg').value = '';
-//                 document.getElementById('telefone').value = '';
-//                 document.getElementById('curso').value = '';
-
-//             } else if (data.status == 0) {
-//                 var p = $(`<div class="alert1">
-//                         <span class="closebtn" onclick="this.parentElement.style.display='none';">&times;</span>
-//                         Erro ao cadastrar Aluno.
-//                         </div>`);
-//                 p.hide()
-//                 $('#Aluno').append(p);
-//                 p.fadeIn(500, function () {
-//                     window.setTimeout(function () {
-//                         p.fadeOut();
-//                     }, 2000)
-//                 });
-
-//             }
-//         }
-//     })
-// }
 function getAluno() {
     $.ajax({
         method: 'GET',
@@ -75,6 +18,8 @@ function getAluno() {
                     <th class="  text-center align-middle">${item.rg}</th>
                     <th class="  text-center align-middle">${item.telefone}</th>
                     <th class="  text-center align-middle">${item.curso}</th>
+                    <th class="acoes  text-center align-middle">
+                    <button class="btn btn-sm btn-secondary ml-4" onclick="editAluno(` + item.id + `)"><i class="fa fa-edit mr-1"></i>Editar</button></th>
                 </tr> 
                 `);
             })
