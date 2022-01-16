@@ -20,12 +20,13 @@ class EditAlunos extends Controller
         $telefone = $request->telefone;
         $curso = $request->curso;
 
-        $edit = DB::update("UPDATE aluno
+        $edit = DB::update("UPDATE `aluno`
         SET `nome_aluno` = :nome_aluno,
          `data_nascimento` = :data_nascimento, 
          `cpf` = :cpf,
          `rg` = :rg, 
-         `telefone` = :telefone
+         `telefone` = :telefone,
+         `curso`= :curso
         WHERE `aluno`.`id` = :id", [
             ":id" => $id,
             ":nome_aluno" => $nome_aluno,
@@ -55,7 +56,8 @@ class EditAlunos extends Controller
         // dd("TESTE");
         // die();
         $response = DB::select(
-            "SELECT a.nome_aluno FROM aluno AS a WHERE id = :id",
+            'SELECT a.nome_aluno, a.data_nascimento, a.cpf, a.rg, a.telefone, a.curso  FROM aluno AS a WHERE id = :id',
+
 
             [
                 ":id" => $id

@@ -4,7 +4,7 @@
         <a href="{{ route('csv') }}"><button class="btn btn-secondary btn-sm ">CSV</button></a>
         <table class="table table-sm table-bordered mt-2 " style="border-radius: 12px">
             <thead class=" grey">
-                <tr>
+                <tr id="lista">
                     <th scope="col" class="font-light text-darken-2 text-center align-middle">Nome Aluno</th>
                     <th scope="col" class="font-light text-center align-middle">Data Nascimento</th>
                     <th scope="col" class="font-light text-center align-middle">CPF</th>
@@ -26,30 +26,41 @@
                         onclick="closeModal()">&times;</span>
                 </div>
                 <div class="modal-body">
-                    <div class="input-field col s6">
-                        <input id="nome_aluno_Edit" name="nome_aluno" type="text" class="validate">
-                        <label for="">Nome Completo</label>
+
+                    <div class="row">
+
+                        <div class="col-md-6 mb-3">
+                            <label for="">Nome Completo:</label>
+                            <input id="nome_aluno_Edit" name="nome_aluno" type="text" class="validate" required>
+                        </div>
+                        <div class="form-group col-md-6">
+                            <label for="">Data de Nascimento:</label>
+                            <input id="data_nascimento_Edit" name="data_nascimento" type="date" class="validate">
+                        </div>
                     </div>
-                    <div class="input-field col s6">
-                        <input id="data_nascimento_Edit" name="data_nascimento" type="date" class="validate">
-                        <label for="">Data de Nascimento</label>
+                    <div class="row">
+                        <div class="col-md-3 mb-3">
+                            <label for="">CPF:</label>
+                            <input id="cpf_Edit" name="cpf" type="text" class="validate">
+                        </div>
+                        <div class="col-md-3 mb-3">
+                            <label for="">RG:</label>
+                            <input id="rg_Edit" type="text" class="validate">
+                        </div>
+                        <div class="col-md-3 mb-3">
+                            <label for="">Telefone:</label>
+                            <input id="telefone_Edit" type="text" class="validate">
+                        </div>
+                       
                     </div>
-                    <div class="input-field col s6">
-                        <input id="cpf_Edit" name="cpf" type="text" class="validate">
-                        <label for="">CPF</label>
+
+                    <div class="row">
+                        <div class="col-md-7 mb-7">
+                            <label for="">Curso:</label>
+                            <input id="curso_Edit" type="text" class="validate">
+                        </div>
                     </div>
-                    <div class="input-field col s6">
-                        <input id="rg_Edit" type="text" class="validate">
-                        <label for="">RG</label>
-                    </div>
-                    <div class="input-field col s6">
-                        <input id="telefone_Edit" type="text" class="validate">
-                        <label for="">Telefone</label>
-                    </div>
-                    <div class="input-field col s6">
-                        <input id="curso_Edit" type="text" class="validate">
-                        <label for="">Curso</label>
-                    </div>
+
                 </div>
                 <div class="modal-footer">
                     <button class="btn btn-danger" onclick="closeModal()">Fechar</button>
