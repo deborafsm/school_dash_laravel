@@ -14,7 +14,7 @@
         href="{{ url('https://fonts.googleapis.com/css?family=Open+Sans:300,400,700&display=swap') }} ">
     <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css"
         integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p" crossorigin="anonymous" />
-    
+
     <link href="https://cdn.jsdelivr.net/npm/select2@4.1.0-rc.0/dist/css/select2.min.css" rel="stylesheet" />
 
 
@@ -52,15 +52,44 @@
 
                             <span class="link-text">Alunos</span>
                         </a>
+                    </li>
+                @else
+                    <li class="nav-item">
+                        <a href="{{ route('ads.aluno') }}" class="nav-link">
+
+                            <span class="link-text">Alunos</span>
+                        </a>
+                    </li>
+                @endif
+                @if ($current == 'professor')
+                    <li class="nav-item">
                         <a href="{{ route('ads.professor') }}" class="nav-link">
 
                             <span class="link-text">Professor</span>
                         </a>
+                    </li>
+                @else
+                    <li class="nav-item">
+                        <a href="{{ route('ads.professor') }}" class="nav-link">
+
+                            <span class="link-text">Professor</span>
+                        </a>
+                    </li>
+                @endif
+                @if ($current == 'listAluno')
+                    <li class="nav-item"> 
+                        <a href="{{ route('ads.listAluno') }} " class="nav-link">
+                            <span class="link-text">Lista Alunos</span>
+                        </a>
+                    </li>
+                @else
+                    <li class="nav-item">
                         <a href="{{ route('ads.listAluno') }} " class="nav-link">
                             <span class="link-text">Lista Alunos</span>
                         </a>
                     </li>
                 @endif
+
                 @if ($current == 'prof')
                     <li class="nav-item">
                         <a href="#" class="nav-link">
@@ -95,15 +124,19 @@
                     <h5>Professores</h5>
                     <div class="title"></div>
                 @endif
+                @if ($current == 'listaAlunos')
+                    <h5>Lista</h5>
+                    <div class="title"></div>
+                @endif
             </div>
-            @yield('content')
+            @yield('content', $current)
         </div>
 
-    </div>
-    <div class="footer_principal">
 
-    </div>
+        <div class="footer_principal">
 
+        </div>
+    </div>
 
 </body>
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
