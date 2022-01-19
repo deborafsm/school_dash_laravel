@@ -115,6 +115,19 @@
                         </a>
                     </li>
                 @endif
+                @if ($current == 'getEvent')
+                    <li class="nav-item">
+                        <a href="{{ route('ads.getEvent') }}" class="nav-link">
+                            <span class="link-text">Lista de Eventos</span>
+                        </a>
+                    </li>
+                @else
+                    <li class="nav-item">
+                        <a href="{{ route('ads.getEvent') }}" class="nav-link">
+                            <span class="link-text">Lista de Eventos</span>
+                        </a>
+                    </li>
+                @endif
 
                 <li class="nav-item" id="themeButton">
                     <a href="#" class="nav-link">
@@ -142,7 +155,11 @@
                     <div class="title"></div>
                 @endif
                 @if ($current == 'evento')
-                    <h5>Evento</h5>
+                    <h5>Cadastrar Eventos</h5>
+                    <div class="title"></div>
+                @endif
+                @if ($current == 'getEvent')
+                    <h5>Lista de Eventos</h5>
                     <div class="title"></div>
                 @endif
             </div>

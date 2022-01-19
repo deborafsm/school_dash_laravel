@@ -38,8 +38,10 @@ class Alunos extends Controller
     public function getAluno(Request $request)
     {
         
-        $res = DB::select('select a.id , a.nome_aluno, a.data_nascimento, a.cpf, a.rg, a.telefone, a.curso from aluno as a');
+        $res = DB::select('select * from aluno');
         return json_encode($res);
        
+
+
     }
 }

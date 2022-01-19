@@ -20,19 +20,18 @@
                         <input id="rg" type="text" class="validate">
                         <label for="">RG</label>
                     </div>
-                   
+                    <select id="curso" name="curso" class="curso" aria-label="Default select example">
+                        <option value="1"></option>
+                    </select>
                 </div>
                 <div class="row">
                     <div class="input-field col s6">
                         <input id="telefone" name="telefone" type="text" class="validate">
                         <label for="">Telefone</label>
                     </div>
-                    <div class="input-field col s6">
-                        <input id="curso" name="curso" type="text" class="validate">
-                        <label for="">Curso</label>
-                    </div>
                 </div>
-               
+                <select class="form-select" id="curso" aria-label="Default select example">
+                </select>
             </div>
             <button class="btn waves-effect waves-light" type="submit" name="action" onclick="newAluno();">Submit
             </button>
