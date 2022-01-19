@@ -18,4 +18,11 @@ class View extends Controller
     {
         return view('Dashboard.Aluno.lista_aluno');
     }
+    public function viewCurso()
+    {
+        return view('Dashboard.Curso.curso');
+    }
+    public function viewEvento(){
+        return view('Dashboard.Evento.evento');
+    }
 }

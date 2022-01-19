@@ -77,7 +77,7 @@
                     </li>
                 @endif
                 @if ($current == 'listAluno')
-                    <li class="nav-item"> 
+                    <li class="nav-item">
                         <a href="{{ route('ads.listAluno') }} " class="nav-link">
                             <span class="link-text">Lista Alunos</span>
                         </a>
@@ -89,20 +89,29 @@
                         </a>
                     </li>
                 @endif
-
-                @if ($current == 'prof')
+                @if ($current == 'curso')
                     <li class="nav-item">
-                        <a href="#" class="nav-link">
-
-                            <span class="link-text">Professores</span>
+                        <a href="{{ route('ads.curso') }}" class="nav-link">
+                            <span class="link-text">Curso</span>
+                        </a>
+                    </li>
+                @else
+                    <li class="nav-item">
+                        <a href="{{ route('ads.curso') }}" class="nav-link">
+                            <span class="link-text">Curso</span>
                         </a>
                     </li>
                 @endif
-                @if ($current == 'cursos')
+                @if ($current == 'evento')
                     <li class="nav-item">
-                        <a href="#" class="nav-link">
-
-                            <span class="link-text">Cursos</span>
+                        <a href="{{ route('ads.evento') }}" class="nav-link">
+                            <span class="link-text">Evento</span>
+                        </a>
+                    </li>
+                @else
+                    <li class="nav-item">
+                        <a href="{{ route('ads.evento') }}" class="nav-link">
+                            <span class="link-text">Evento</span>
                         </a>
                     </li>
                 @endif
@@ -126,6 +135,14 @@
                 @endif
                 @if ($current == 'listaAlunos')
                     <h5>Lista</h5>
+                    <div class="title"></div>
+                @endif
+                @if ($current == 'curso')
+                    <h5>Curso</h5>
+                    <div class="title"></div>
+                @endif
+                @if ($current == 'evento')
+                    <h5>Evento</h5>
                     <div class="title"></div>
                 @endif
             </div>
