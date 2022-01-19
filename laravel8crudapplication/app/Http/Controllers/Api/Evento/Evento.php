@@ -1,6 +1,6 @@
 <?php
 
-namespace App\Http\Controllers\Evento;
+namespace App\Http\Controllers\Api\Evento;
 
 use App\Http\Controllers\Controller;
 use Illuminate\Http\Request;
