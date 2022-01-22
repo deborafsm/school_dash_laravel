@@ -3,12 +3,12 @@ $(function () {
     
 })
 
-// $("#pesq").on("keyup", function () {
-//     var value = $(this).val().toLowerCase();
-//     $("#listEvents tr").filter(function () {
-//         $(this).toggle($(this).text().toLowerCase().indexOf(value) > -1)
-//     });
-// });
+$("#pesq").on("keyup", function () {
+    var value = $(this).val().toLowerCase();
+    $("#listEvents tr").filter(function () {
+        $(this).toggle($(this).text().toLowerCase().indexOf(value) > -1)
+    });
+});
 
 function getEvents() {
     $.ajax({

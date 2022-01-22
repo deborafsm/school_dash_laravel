@@ -1,7 +1,14 @@
 @extends('Dashboard.template', ['current' => 'listaAlunos'])
 @section('content')
+    <hr>
+    <div class="form-group">
+        <label style="font-weight: 600" for="exampleFormControlTextarea1">Pesquisa</label>
+        <input style="font-weight: 200" class="form-control" type="text" name="" id="pesq">
+    </div>
+    <hr>
+    <a href="{{ route('csv') }}"><button class="btn btn-secondary btn-sm ">CSV</button></a>
+
     <div class="lista_alunos">
-        <a href="{{ route('csv') }}"><button class="btn btn-secondary btn-sm ">CSV</button></a>
         <table class="table table-sm table-bordered mt-2 " style="border-radius: 12px">
             <thead class=" grey">
                 <tr id="lista">
@@ -51,7 +58,7 @@
                             <label for="">Telefone:</label>
                             <input id="telefone_Edit" type="text" class="validate">
                         </div>
-                       
+
                     </div>
 
                     <div class="row">

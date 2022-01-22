@@ -297,3 +297,9 @@ h4{
   /* width: 101vh; */
   height: 230px;
 }
+
+.lista_alunos{
+  overflow-x: scroll;
+  overflow-x: hidden;
+  height: 250px;
+}

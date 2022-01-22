@@ -1,7 +1,7 @@
-$(document).on('reader', function () {
-    $('#curso').select2({
-        placeholder: 'Selecione o Ramal'
-    });
+// $(document).on('reader', function () {
+//     $('#curso').select2({
+//         placeholder: 'Selecione o Ramal'
+//     });
 
 
-})
+// })

@@ -6,30 +6,31 @@
                 <form class="col s12">
                     <div class="row">
                         <div class="input-field col s6">
-                            <input id="nome_completo_prf" type="text" class="validate">
                             <label for="nome_completo_prf">Nome Completo</label>
+                            <input id="nome_completo_prf" type="text" class="form-control">
                         </div>
                         <div class="input-field col s6">
-                            <input id="data_nascimento_prf" type="date" class="validate">
                             <label for="data_nascimento_prf">Data de Nascimento</label>
+                            <input id="data_nascimento_prf" type="date"class="form-control">
                         </div>
                         <div class="input-field col s6">
-                            <input id="matricula_prf" type="text" class="validate">
                             <label for="matricula_prf">Matricula</label>
+                            <input id="matricula_prf" type="text" class="form-control">
                         </div>
                     </div>
                     <div class="row">
                         <div class="input-field col s6">
-                            <input id="telefone_prf" type="text" class="validate">
                             <label for="telefone_prf">Telefone</label>
+                            <input id="telefone_prf" type="text" class="form-control">
                         </div>
                         <div class="input-field col s6">
-                            <input id="curso_prf" type="text" class="validate">
                             <label for="curso_prf">Curso</label>
+                            <input id="curso_prf" type="text" class="form-control">
                         </div>
                     </div>
                   
-                    <a onclick="addPrf()" class="btn-floating btn-large waves-effect waves-light red"><i class="material-icons">add</i></a>
+                    
+                    <button style="margin-top: 10px;" type="button" class="btn btn-success" onclick="addPrf()">Cadastrar</button>
                 </form>
             </div>
         </div>

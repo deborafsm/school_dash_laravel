@@ -2,8 +2,6 @@
 @section('content')
     <div id="eventos">
 
-
-
         <div class="row">
             <div class="col-md-6 mb-3">
                 <label for="">Titulo do Evento</label>
@@ -28,22 +26,7 @@
         </div>
 
     </div>
-    <div class="tab">
-
-        <table id="tableEvents"class="table table-hover" style="border-radius: 12px">
-            <thead class=" grey">
-                <tr >
-                    <th scope="col" class="font-light text-darken-2 text-center align-middle">Titulo</th>
-                    <th scope="col" class="font-light text-center align-middle">Data</th>
-                    <th scope="col" class="font-light text-center align-middle">Hora</th>
-                    <th scope="col" class="font-light text-center align-middle">Descrição</th>
-                    <th scope="col" class="acoes font-weight-light text-center align-middle"></th>
-                </tr>
-            </thead>
-            <tbody id="listEvents">
-            </tbody>
-        </table>
-    </div>
+    
 
 
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>

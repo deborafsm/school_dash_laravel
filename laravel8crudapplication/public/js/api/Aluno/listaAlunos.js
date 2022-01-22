@@ -2,7 +2,12 @@ $(function () {
     getAluno()
 
 })
-
+$("#pesq").on("keyup", function () {
+    var value = $(this).val().toLowerCase();
+    $("#listAlunos tr").filter(function () {
+        $(this).toggle($(this).text().toLowerCase().indexOf(value) > -1)
+    });
+});
 function getAluno() {
     $.ajax({
         method: 'GET',

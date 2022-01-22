@@ -22,5 +22,7 @@ Route::get('/getCursos', [Curso::class, 'getCursos'])->name('ads.api.getCursos')
 // Professores
 Route::post('/newPrf', [newProfessor::class, 'insertProfessor'])->name('ads.api.newprof');
 // Eventos
-Route::post('/newEventos',[Evento::class, 'newEvent']);
-Route::get('/listEvents',[Evento::class, 'getListEvents']);
+Route::post('/newEventos', [Evento::class, 'newEvent']);
+Route::get('/listEvents', [Evento::class, 'getListEvents']);
+// Curso
+Route::post('/newCurso', [Curso::class, 'addCurso']);

@@ -5,38 +5,37 @@
             <div class="row" id="Aluno">
                 <div class="row">
                     <div class="input-field col s6">
-                        <input id="nome_aluno" name="nome_aluno" type="text" class="validate">
                         <label for="">Nome Completo</label>
+                        <input id="nome_aluno" name="nome_aluno" type="text" class="form-control">
                     </div>
                     <div class="input-field col s6">
-                        <input id="data_nascimento" name="data_nascimento" type="date" class="validate">
                         <label for="">Data de Nascimento</label>
+                        <input id="data_nascimento" name="data_nascimento" type="date" class="form-control">
                     </div>
                     <div class="input-field col s6">
-                        <input id="cpf" name="cpf" type="text" class="validate">
                         <label for="">CPF</label>
+                        <input id="cpf" name="cpf" type="text" class="form-control">
                     </div>
                     <div class="input-field col s6">
-                        <input id="rg" type="text" class="validate">
                         <label for="">RG</label>
+                        <input id="rg" type="text" class="form-control">
                     </div>
-                   
+
                 </div>
                 <div class="row">
                     <div class="input-field col s6">
-                        <input id="telefone" name="telefone" type="text" class="validate">
                         <label for="">Telefone</label>
+                        <input id="telefone" name="telefone" type="text" class="form-control">
                     </div>
                     <div class="input-field col s6">
-                        <input id="curso" name="curso" type="text" class="validate">
                         <label for="">Curso</label>
+                        <input id="curso" name="curso" type="text" class="form-control">
                     </div>
                 </div>
-               
-            </div>
-            <button class="btn waves-effect waves-light" type="submit" name="action" onclick="newAluno();">Submit
-            </button>
 
+            </div>
+
+            <button style="margin-top: 10px;" type="button" class="btn btn-success" onclick="newAluno();">Cadastrar</button>
         </div>
 
     </div>
@@ -52,5 +51,5 @@
 
     <script src="{{ asset('js/api/Aluno/newAluno.js') }}"></script>
     <script src="{{ asset('js/api/Curso/listCursos.js') }}"></script>
-  
+
 @endsection

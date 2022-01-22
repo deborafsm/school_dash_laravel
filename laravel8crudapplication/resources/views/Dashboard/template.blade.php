@@ -6,7 +6,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <link rel="stylesheet" href="{{ url('assets/style.css') }}">
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
 
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
     <link rel="stylesheet" href="{{ url('assets/bootstrap/css/bootstrap.min.css') }}">
@@ -117,6 +118,19 @@
                         </a>
                     </li>
                 @endif
+                @if ($current == 'lista_events')
+                    <li class="nav-item">
+                        <a href="{{ route('ads.listevento') }}" class="nav-link">
+                            <span class="link-text">Lista de Evento</span>
+                        </a>
+                    </li>
+                @else
+                    <li class="nav-item">
+                        <a href="{{ route('ads.listevento') }}" class="nav-link">
+                            <span class="link-text">Lista de Evento</span>
+                        </a>
+                    </li>
+                @endif
 
                 <li class="nav-item" id="themeButton">
                     <a href="#" class="nav-link">
@@ -144,6 +158,10 @@
                     <div class="title"></div>
                 @endif
                 @if ($current == 'evento')
+                    <h5>Evento</h5>
+                    <div class="title"></div>
+                @endif
+                @if ($current == 'Lista de Eventos')
                     <h5>Evento</h5>
                     <div class="title"></div>
                 @endif
