@@ -3,35 +3,53 @@
     <div id="eventos">
 
 
+
         <div class="row">
             <div class="col-md-6 mb-3">
                 <label for="">Titulo do Evento</label>
-                <input id="titulo" name="titulo" type="text" class="validate" required>
+                <input id="titulo" name="titulo" type="text" class="form-control">
+            </div>
+            <div class="col-md-3 mb-3">
+                <label for="">Data</label>
+                <input id="data" name="data" type="date" class="form-control">
+            </div>
+            <div class="col-md-3 mb-3">
+                <label for="">Hora</label>
+                <input id="horario" name="horario" type="time" class="form-control">
+            </div>
+            <div class="form-group">
+                <label for="exampleFormControlTextarea1">Descrição</label>
+                <textarea class="form-control" id="observacao" name="observacao" rows="3"></textarea>
             </div>
 
-            <div class="col-md-6 mb-3">
-                <div class="row">
-                    <label for="">Data<label>
-                </div>
-                <input id="data" name="data" type="date" class="validate" required>
-            </div>
-            <div class="col-md-2 mb-3">
-                <div class="row">
-                    <label for="">Hora'<label>
-                </div>
-                <input id="horario" name="horario" type="time" class="validate" required>
-            </div>
-            <div class="form-group col-md-6">
-                <div class="row">
-                    <label for="">Observação</label>
-                </div>
-                <textarea id="observacao" name="observacao" type="text-area" class="validate" required></textarea>
-            </div>
         </div>
-        <a class="btn-floating btn-large waves-effect waves-light red" onclick="addEvent()"><i
-                class="material-icons">add</i></a>
+        <div class="form-row d-flex justify-content-start" style="padding-top: 10px">
+            <button type="button" class="btn btn-success" onclick="addEvent()">Enviar</button>
+        </div>
+
     </div>
+    <div class="tab">
+
+        <table id="tableEvents"class="table table-hover" style="border-radius: 12px">
+            <thead class=" grey">
+                <tr >
+                    <th scope="col" class="font-light text-darken-2 text-center align-middle">Titulo</th>
+                    <th scope="col" class="font-light text-center align-middle">Data</th>
+                    <th scope="col" class="font-light text-center align-middle">Hora</th>
+                    <th scope="col" class="font-light text-center align-middle">Descrição</th>
+                    <th scope="col" class="acoes font-weight-light text-center align-middle"></th>
+                </tr>
+            </thead>
+            <tbody id="listEvents">
+            </tbody>
+        </table>
+    </div>
+
+
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+    <script src="https://cdn.datatables.net/1.11.4/js/jquery.dataTables.min.js"></script>
     <script src="{{ asset('js/api/Eventos/newEvents.js') }}"></script>
+    <script src="{{ asset('js/api/Eventos/listEvents.js') }}"></script>
+
 @endsection

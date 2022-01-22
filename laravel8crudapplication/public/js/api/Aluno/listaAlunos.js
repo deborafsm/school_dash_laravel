@@ -1,14 +1,15 @@
-$(function(){
+$(function () {
     getAluno()
+
 })
 
 function getAluno() {
     $.ajax({
         method: 'GET',
-        url: 'http://127.0.0.1:8000/api/getAluno',
+        url: 'http://127.0.0.1:8000/api/getAllAluno',
         success: function (e) {
             let data = JSON.parse(e);
-            $('.listAlunos').remove();
+            $('.listAluno').remove();
             data.forEach(function (item, index) {
                 $('#listAlunos').append(`
                     <tr class="listAluno">
@@ -18,6 +19,8 @@ function getAluno() {
                     <th class="  text-center align-middle">${item.rg}</th>
                     <th class="  text-center align-middle">${item.telefone}</th>
                     <th class="  text-center align-middle">${item.curso}</th>
+                    <th class="acoes  text-center align-middle">
+                    <button class="btn btn-sm btn-secondary ml-4" onclick="modalEditAlunos(` + item.id + `)"><i class="fa fa-edit mr-1"></i>Editar</button></th>
                 </tr> 
                 `);
             })

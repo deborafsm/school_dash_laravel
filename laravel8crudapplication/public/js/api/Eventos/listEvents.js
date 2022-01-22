@@ -1,18 +1,19 @@
 $(function () {
     getEvents();
+    
 })
 
-$("#pesq").on("keyup", function () {
-    var value = $(this).val().toLowerCase();
-    $("#listEvents tr").filter(function () {
-        $(this).toggle($(this).text().toLowerCase().indexOf(value) > -1)
-    });
-});
+// $("#pesq").on("keyup", function () {
+//     var value = $(this).val().toLowerCase();
+//     $("#listEvents tr").filter(function () {
+//         $(this).toggle($(this).text().toLowerCase().indexOf(value) > -1)
+//     });
+// });
 
 function getEvents() {
     $.ajax({
         method: 'GET',
-        url: 'http://127.0.0.1:8000/api/getEvents',
+        url: 'http://127.0.0.1:8000/api/listEvents',
         success: function (e) {
             let data = JSON.parse(e);
             $(".listEvents").remove();
@@ -27,4 +28,5 @@ function getEvents() {
             })
         }
     })
+
 }

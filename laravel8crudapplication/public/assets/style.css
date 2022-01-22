@@ -291,3 +291,9 @@ h4{
     width: 330px;
 
 }
+.tab{
+  overflow-x: scroll;
+  overflow-x: hidden;
+  /* width: 101vh; */
+  height: 230px;
+}

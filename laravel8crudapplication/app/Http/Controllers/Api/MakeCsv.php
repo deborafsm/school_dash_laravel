@@ -22,11 +22,11 @@ class MakeCsv extends Controller
             $newData[$key] = $value;
         }
         
-        $arquivo = 'soma_solicitacoes.xls';
+        $arquivo = 'todos_alunos.xls';
         $html = '';
 		$html .= '<table border="1">';
 		$html .= '<tr>';
-		$html .= "<td colspan='4'>Total de solicitações canceladas e concluídas.</tr>";
+		$html .= "<td colspan='4'>Todos os alunos.</tr>";
 		$html .= '</tr>';
 		
 		
