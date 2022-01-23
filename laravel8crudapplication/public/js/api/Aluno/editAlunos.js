@@ -1,7 +1,5 @@
-
 let idAluno;
-
-function editAluno() {
+const editAluno = () => {
     let nome_aluno = document.getElementById('nome_aluno_Edit').value
     let data_nascimento = document.getElementById('data_nascimento_Edit').value
     let cpf = document.getElementById('cpf_Edit').value
@@ -55,10 +53,12 @@ function editAluno() {
 
 
 
-function closeModal() {
+
+const closebtn = () => {
     var modal = document.getElementById('modalAluno');
     modal.style.display = "none";
 }
+
 
 
 $('#close1').on('click', function (r) {
@@ -68,7 +68,7 @@ $('#close1').on('click', function (r) {
     }
 })
 
-function modalEditAlunos(id_a) {
+const modalEditAlunos = () => {
     idAluno = id_a
     $.ajax({
         method: "GET",

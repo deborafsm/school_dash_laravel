@@ -1,4 +1,4 @@
-function addEvent() {
+const addEvent = () => {
     let titulo = document.getElementById('titulo').value;
     let data = document.getElementById('data').value;
     let hora = document.getElementById('horario').value;
@@ -46,14 +46,5 @@ function addEvent() {
                 });
             }
         }
-
-    })
-
-
-    function listEvents() {
-        $.ajax({
-            method: "GET",
-            url: "http://127.0.0.1:8000/api/listEvents";
-        })
-    }
-}
+    });
+}   

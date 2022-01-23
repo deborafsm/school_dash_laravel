@@ -1,10 +1,8 @@
 $(function () {
     getCurso();
-    
+
 });
-
-function newAluno() {
-
+const newAluno = () => {
     let nome_aluno = document.getElementById('nome_aluno').value;
     let data_nascimento = document.getElementById('data_nascimento').value;
     let cpf = document.getElementById('cpf').value;
@@ -60,16 +58,15 @@ function newAluno() {
         }
     })
 }
-function getCurso()
-{
+
+
+const getCurso = () => {
     $.ajax({
         method: 'GET',
         url: 'http://127.0.0.1:8000/api/getCursos',
-        success: function(e)
-        {
+        success: function (e) {
             var data = JSON.parse(e);
-            data.forEach(function(item, index)
-            {
+            data.forEach(function (item, index) {
                 $('#curso').append(`
                 <option value="${item.nome_curso}">${item.nome_curso}</option>
                 `)

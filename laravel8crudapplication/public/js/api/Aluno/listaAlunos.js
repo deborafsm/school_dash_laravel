@@ -10,7 +10,7 @@ $("#pesq").on("keyup", function () {
     });
 });
 
-function getAluno() {
+const getAluno = () => {
     $.ajax({
         method: 'GET',
         url: 'http://127.0.0.1:8000/api/getAllAluno',
@@ -35,7 +35,7 @@ function getAluno() {
     })
 }
 
-function allCursos() {
+const allCursos = () => {
     $.ajax({
         method: 'GET',
         url: 'http://127.0.0.1:8000/api/getCursos',
@@ -55,16 +55,14 @@ function allCursos() {
 }
 
 
-function getCurso()
-{
+
+const getCurso = () => {
     $.ajax({
         method: 'GET',
         url: 'http://127.0.0.1:8000/api/getCursos',
-        success: function(e)
-        {
+        success: function (e) {
             var data = JSON.parse(e);
-            data.forEach(function(item, index)
-            {
+            data.forEach(function (item, index) {
                 $('#curso').append(`
                 <option value="${item.nome_curso}">${item.nome_curso}</option>
                 `)
@@ -73,6 +71,7 @@ function getCurso()
         }
     })
 }
+
 
 $("#curso").on("change", function () {
     var value = $(this).val().toLowerCase();

@@ -1,6 +1,6 @@
 $(function () {
     getEvents();
-    
+
 })
 
 $("#pesq").on("keyup", function () {
@@ -10,7 +10,7 @@ $("#pesq").on("keyup", function () {
     });
 });
 
-function getEvents() {
+const getEvents = () => {
     $.ajax({
         method: 'GET',
         url: 'http://127.0.0.1:8000/api/listEvents',
@@ -28,5 +28,6 @@ function getEvents() {
             })
         }
     })
-
 }
+
+

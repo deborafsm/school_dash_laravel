@@ -6,9 +6,9 @@
         <input style="font-weight: 200" class="form-control" type="text" name="" id="pesq">
     </div>
     <div class="mb-3 col-md-4">
-        <label for="">Curso</label>
+        <label for="">Por curso</label>
         <select id="curso" name="curso" type="text" class="form-control">
-            <option value="" selected disabled>Escolha</option>
+            <option value="" selected >Escolha</option>
         </select>
     </div>
     <hr>

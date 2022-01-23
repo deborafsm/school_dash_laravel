@@ -1,4 +1,4 @@
-function newCurso() {
+const newCurso = () => {
     let nome_curso = document.getElementById('nome_curso').value;
     let duracao_sem = document.getElementById('duracao_sem').value;
 
@@ -25,7 +25,7 @@ function newCurso() {
                 });
                 document.getElementById('nome_aluno').value = '';
                 document.getElementById('duracao_sem').value = '';
-                
+
             } else {
                 var p = $(`<div class="alert1">
                 <span class="closebtn" onclick="this.parentElement.style.display='none';">&times;</span>
@@ -43,3 +43,4 @@ function newCurso() {
 
     })
 }
+

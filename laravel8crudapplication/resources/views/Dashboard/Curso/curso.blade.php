@@ -2,15 +2,37 @@
 @section('content')
     <div id="Cursos">
         <div class="row">
-
+            <hr>
+            <h3>Detalhes do curso</h3>
+            <hr>
+            
+            <div class="form-group col-md-12">
+                <label for="">Professor da Materia:</label>
+                <input id="duracao_sem" name="duracao_sem" type="text" class="form-control">
+            </div>
             <div class="col-md-6 mb-3">
                 <label for="">Nome do Curso:</label>
                 <input id="nome_curso" name="nome_curso" type="text" class="form-control">
             </div>
             <div class="form-group col-md-6">
                 <label for="">Duração do Curso (semestre):</label>
+                <input id="duracao_sem" name="duracao_sem" type="number" class="form-control">
+            </div>
+        </div>
+
+        <hr>
+
+        <div class="row">
+
+            <div class="col-md-6 mb-3">
+                <label for="">Nome da Materia:</label>
+                <input id="nome_curso" name="nome_curso" type="text" class="form-control">
+            </div>
+            <div class="form-group col-md-6">
+                <label for="">Semestre:</label>
                 <input id="duracao_sem" name="duracao_sem" type="text" class="form-control">
             </div>
+
         </div>
         <button onclick="newCurso()">Cadastrar</button>
     </div>
