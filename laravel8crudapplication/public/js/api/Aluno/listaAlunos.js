@@ -1,5 +1,6 @@
 $(function () {
     getAluno()
+    getCurso()
 
 })
 $("#pesq").on("keyup", function () {
@@ -8,6 +9,7 @@ $("#pesq").on("keyup", function () {
         $(this).toggle($(this).text().toLowerCase().indexOf(value) > -1)
     });
 });
+
 function getAluno() {
     $.ajax({
         method: 'GET',
@@ -51,3 +53,30 @@ function allCursos() {
         }
     })
 }
+
+
+function getCurso()
+{
+    $.ajax({
+        method: 'GET',
+        url: 'http://127.0.0.1:8000/api/getCursos',
+        success: function(e)
+        {
+            var data = JSON.parse(e);
+            data.forEach(function(item, index)
+            {
+                $('#curso').append(`
+                <option value="${item.nome_curso}">${item.nome_curso}</option>
+                `)
+
+            })
+        }
+    })
+}
+
+$("#curso").on("change", function () {
+    var value = $(this).val().toLowerCase();
+    $("#listAlunos tr").filter(function () {
+        $(this).toggle($(this).text().toLowerCase().indexOf(value) > -1)
+    });
+});

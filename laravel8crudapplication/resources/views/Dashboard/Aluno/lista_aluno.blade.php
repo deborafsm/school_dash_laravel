@@ -5,6 +5,12 @@
         <label style="font-weight: 600" for="exampleFormControlTextarea1">Pesquisa</label>
         <input style="font-weight: 200" class="form-control" type="text" name="" id="pesq">
     </div>
+    <div class="mb-3 col-md-4">
+        <label for="">Curso</label>
+        <select id="curso" name="curso" type="text" class="form-control">
+            <option value="" selected disabled>Escolha</option>
+        </select>
+    </div>
     <hr>
     <a href="{{ route('csv') }}"><button class="btn btn-secondary btn-sm ">CSV</button></a>
 
@@ -24,6 +30,7 @@
             <tbody id="listAlunos">
             </tbody>
         </table>
+
 
         <div id="modalAluno" class="modal">
             <div class="modal-content" id="content_edit_aluno">
