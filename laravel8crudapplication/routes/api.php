@@ -18,7 +18,7 @@ Route::post('/newAluno', [Alunos::class, 'newAluno'])->name('ads.api.newAluno');
 Route::post('/edit', [EditAlunos::class, 'editAlunos'])->name('ads.api.editAlunos');
 Route::get('/GetById/{id}', [EditAlunos::class, 'getIdAluno'])->name('ads.api.getIdAluno');
 Route::get('/getAllAluno', [Alunos::class, 'getAluno'])->name('ads.api.allAluno');
-Route::get('/getCursos', [Curso::class, 'getCursos'])->name('ads.api.getCursos');
+Route::get('/getCursos', [Curso::class, 'getCurso'])->name('ads.api.getCursos');
 // Professores
 Route::post('/newPrf', [newProfessor::class, 'insertProfessor'])->name('ads.api.newprof');
 // Eventos

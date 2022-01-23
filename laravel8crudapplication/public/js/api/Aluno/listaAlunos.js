@@ -23,7 +23,7 @@ function getAluno() {
                     <th class="  text-center align-middle">${item.cpf}</th>
                     <th class="  text-center align-middle">${item.rg}</th>
                     <th class="  text-center align-middle">${item.telefone}</th>
-                    <th class="  text-center align-middle">${item.curso}</th>
+                    <th class="  text-center align-middle">${item.Curso}</th>
                     <th class="acoes  text-center align-middle">
                     <button class="btn btn-sm btn-secondary ml-4" onclick="modalEditAlunos(` + item.id + `)"><i class="fa fa-edit mr-1"></i>Editar</button></th>
                 </tr> 

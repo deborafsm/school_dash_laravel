@@ -1,5 +1,6 @@
 $(function () {
-    getAluno()
+    getCurso();
+    
 });
 
 function newAluno() {
@@ -56,6 +57,24 @@ function newAluno() {
                 });
 
             }
+        }
+    })
+}
+function getCurso()
+{
+    $.ajax({
+        method: 'GET',
+        url: 'http://127.0.0.1:8000/api/getCursos',
+        success: function(e)
+        {
+            var data = JSON.parse(e);
+            data.forEach(function(item, index)
+            {
+                $('#curso').append(`
+                <option value="${item.nome_curso}">${item.nome_curso}</option>
+                `)
+
+            })
         }
     })
 }

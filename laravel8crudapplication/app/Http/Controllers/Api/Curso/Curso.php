@@ -13,11 +13,12 @@ class Curso extends Controller
 
     public function addCurso(Request $request)
     {
-      
+
         $nome_curso = $request->nome_curso;
         $duracao_sem = $request->duracao_sem;
 
-        DB::insert("INSERT INTO curso(nome_curso, duracao_sem) 
+        DB::insert(
+            "INSERT INTO curso(nome_curso, duracao_sem) 
         VALUES (:nome_curso, :duracao_sem)",
             [
                 'nome_curso' => $nome_curso,
@@ -39,5 +40,17 @@ class Curso extends Controller
         }
 
         return json_encode($lista);
+    }
+
+
+
+
+    public function getCurso()
+    {
+        $var = DB::select("SELECT
+        *
+        FROM curso ;");
+
+        return json_encode($var);
     }
 }

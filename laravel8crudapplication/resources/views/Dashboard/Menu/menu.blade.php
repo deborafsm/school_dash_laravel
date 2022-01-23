@@ -27,10 +27,12 @@
                         <label for="">Telefone</label>
                         <input id="telefone" name="telefone" type="text" class="form-control">
                     </div>
-                    <div class="input-field col s6">
-                        <label for="">Curso</label>
-                        <input id="curso" name="curso" type="text" class="form-control">
-                    </div>
+                    <div class="mb-3 col-md-4">
+                        <label for="" >Curso</label>
+                        <select id="curso" name="curso" type="text" class="form-control" >
+                          <option value="" selected disabled>Escolha</option>
+                        </select>
+                      </div>
                 </div>
 
             </div>
