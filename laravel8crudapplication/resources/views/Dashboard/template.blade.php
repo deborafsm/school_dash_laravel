@@ -150,11 +150,13 @@
                     <div class="title"></div>
                 @endif
                 @if ($current == 'listaAlunos')
-                    <h5>Lista</h5>
-                    <div class="title"></div>
+                    
+                    <div class="title">
+                        <h5>Lista de Alunos</h5>
+                    </div>
                 @endif
                 @if ($current == 'curso')
-                    <h5>Curso</h5>
+                    <h5></h5>
                     <div class="title"></div>
                 @endif
                 @if ($current == 'evento')

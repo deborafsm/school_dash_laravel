@@ -22,8 +22,7 @@ class Alunos extends Controller
             $curso = $request->curso;
             $aluno_id = $this->getCurso($curso);
 
-            DB::insert(
-                'INSERT INTO aluno (nome_aluno, data_nascimento, cpf, rg, telefone) 
+            DB::insert('INSERT INTO aluno (nome_aluno, data_nascimento, cpf, rg, telefone) 
             VALUE(:nome_aluno, :data_nascimento, :cpf, :rg, :telefone)',
                 [
                     'nome_aluno' => $nome_aluno,
@@ -43,32 +42,19 @@ class Alunos extends Controller
         });
 
 
-        DB::update(
-            "UPDATE aluno a
-                SET a.fk_curso = :id
-                WHERE a.id = last_insert_id()",
+        DB::update("UPDATE aluno a SET a.fk_curso = :id WHERE a.id = last_insert_id()",
             [
                 ":id" => $aluno_id->id
-            ]
-        );
+            ]);
 
 
 
         return $cadastro;
     }
 
-    // $fk_curso = DB::update("UPDATE aluno a
-    //             SET a.fk_curso = ?
-    //             WHERE a.id = last_insert_id()",
-    //             [
-    //                 $solicitante_id->id
-    //             ]);  
-
-
-
+ 
     public function getAluno(Request $request)
     {
-
         // $res = DB::select('select a.id , a.nome_aluno, a.data_nascimento, a.cpf, a.rg, a.telefone, a.curso from aluno as a');
         $res = DB::select("SELECT  DISTINCT
         a.nome_aluno,
@@ -85,17 +71,11 @@ class Alunos extends Controller
 
     public function getCurso($curso)
     {
-        $res = DB::select(
-            "SELECT
-        c.id
-        FROM
-        curso c
-        WHERE c.nome_curso = :nome",
+        $res = DB::select("SELECT c.id FROM curso c WHERE c.nome_curso = :nome",
             [
                 ":nome" => $curso
             ]
         );
-
         foreach ($res as $key => $value) {
             return $id = $value;
         }
