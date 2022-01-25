@@ -1,12 +1,9 @@
-
-
-
 .container_principal {
     display: flex;
-    
+
     flex-direction: column;
     width: 100%;
-    height:auto;
+    height: auto;
     background-color: rgb(250, 250, 250);
     padding: 12px 35px 0px 35px;
 }
@@ -19,59 +16,59 @@
     --bg-primary: #ececec;
     --bg-secondary: #cacae2;
     --transition-speed: 600ms;
-  }
-  
-  body {
+}
+
+body {
     color: black;
     background-color: #cacae2;
     margin: 0;
     padding: 0;
-  }
- 
-  
-  body::-webkit-scrollbar {
+}
+
+
+body::-webkit-scrollbar {
     width: 0.25rem;
-  }
-  
-  body::-webkit-scrollbar-track {
+}
+
+body::-webkit-scrollbar-track {
     background: #1e1e24;
-  }
-  
-  body::-webkit-scrollbar-thumb {
+}
+
+body::-webkit-scrollbar-thumb {
     background: #6649b8;
-  }
-  
-  main {
+}
+
+main {
     margin-left: 5rem;
     padding: 1rem;
-  }
-  
-  .navbar {
+}
+
+.navbar {
     position: fixed;
     background-color: var(--bg-primary);
     transition: width 600ms ease;
-    overflow: scroll;
-  }
-  
-  .navbar-nav {
-    list-style: none;
+    /* overflow: scroll; */
+}
+
+.navbar-nav {
+    /* list-style: none;
     padding: 0;
     margin: 0;
     display: flex;
     flex-direction: column;
     align-items: center;
-    height: 100%;
-  }
-  
-  .nav-item {
+    height: 100%; */
+}
+
+.nav-item {
     width: 100%;
-  }
-  
-  .nav-item:last-child {
+}
+
+.nav-item:last-child {
     margin-top: auto;
-  }
-  
-  .nav-link {
+}
+
+.nav-link {
     display: flex;
     align-items: center;
     height: 5rem;
@@ -79,39 +76,39 @@
     text-decoration: none;
     filter: grayscale(100%) opacity(0.7);
     transition: var(--transition-speed);
-  }
-  
-  .nav-link:hover {
+}
+
+.nav-link:hover {
     filter: grayscale(0%) opacity(1);
     background: var(--bg-secondary);
     color: var(--text-secondary);
-  }
-  
-  .link-text {
+}
+
+.link-text {
     display: none;
     margin-left: 1rem;
-  }
-  
-  .nav-link svg {
+}
+
+.nav-link svg {
     width: 2rem;
     min-width: 2rem;
     margin: 0 1.5rem;
-  }
-  
-  .fa-primary {
+}
+
+.fa-primary {
     color: #ff7eee;
-  }
-  
-  .fa-secondary {
+}
+
+.fa-secondary {
     color: #df49a6;
-  }
-  
-  .fa-primary,
-  .fa-secondary {
+}
+
+.fa-primary,
+.fa-secondary {
     transition: var(--transition-speed);
-  }
-  
-  .logo {
+}
+
+.logo {
     font-weight: bold;
     text-transform: uppercase;
     margin-bottom: 1rem;
@@ -121,128 +118,125 @@
     font-size: 1.5rem;
     letter-spacing: 0.3ch;
     width: 100%;
-  }
-  
-  .logo svg {
+}
+
+.logo svg {
     transform: rotate(0deg);
     transition: var(--transition-speed);
-  }
-  
-  .logo-text
-  {
+}
+
+.logo-text {
     display: inline;
     position: absolute;
     left: -999px;
     transition: var(--transition-speed);
-  }
-  
-  .navbar:hover .logo svg {
+}
+
+.navbar:hover .logo svg {
     transform: rotate(-180deg);
-  }
-  
-  /* Small screens */
-  @media only screen and (max-width: 600px) {
+}
+
+/* Small screens */
+@media only screen and (max-width: 600px) {
     .navbar {
-      bottom: 0;
-      width: 100vw;
-      height: 5rem;
+        bottom: 0;
+        width: 100vw;
+        height: 5rem;
     }
-  
+
     .logo {
-      display: none;
+        display: none;
     }
-  
+
     .navbar-nav {
-      flex-direction: row;
+        flex-direction: row;
     }
-  
+
     .nav-link {
-      justify-content: center;
+        justify-content: center;
     }
-  
+
     main {
-      margin: 0;
+        margin: 0;
     }
-  }
-  
-  /* Large screens */
-  @media only screen and (min-width: 600px) {
+}
+
+/* Large screens */
+@media only screen and (min-width: 600px) {
     .navbar {
-      top: 0;
-      width: 5rem;
-      height: 100vh;
+        top: 0;
+        width: 5rem;
+        height: 100vh;
     }
-  
+
     .navbar:hover {
-      width: 16rem;
+        width: 16rem;
     }
-  
+
     .navbar:hover .link-text {
-      display: inline;
+        display: inline;
     }
-  
-    .navbar:hover .logo svg
-    {
-      margin-left: 11rem;
+
+    .navbar:hover .logo svg {
+        margin-left: 11rem;
     }
-  
-    .navbar:hover .logo-text
-    {
-      left: 0px;
+
+    .navbar:hover .logo-text {
+        left: 0px;
     }
-  }
-  
-  .dark {
+}
+
+.dark {
     --text-primary: #b6b6b6;
     --text-secondary: #ececec;
     --bg-primary: #23232e;
     --bg-secondary: #141418;
-  }
-  
-  .light {
+}
+
+.light {
     --text-primary: #1f1f1f;
     --text-secondary: #000000;
     --bg-primary: #ffffff;
     --bg-secondary: #e4e4e4;
-  }
-  
-  .solar {
+}
+
+.solar {
     --text-primary: #576e75;
     --text-secondary: #35535c;
     --bg-primary: #fdf6e3;
     --bg-secondary: #f5e5b8;
-  }
-  
-  .theme-icon {
+}
+
+.theme-icon {
     display: none;
-  }
-  
-  .dark #darkIcon {
+}
+
+.dark #darkIcon {
     display: block;
-  }
-  
-  .light #lightIcon {
+}
+
+.light #lightIcon {
     display: block;
-  }
-  
-  .solar #solarIcon {
+}
+
+.solar #solarIcon {
     display: block;
-  }
-  .conteudos_internos
-{
+}
+
+.conteudos_internos {
     grid-area: cont;
     background-color: #e9e9e9;
     padding: 20px;
-    
+
 }
-.footer_principal
-{
+
+.footer_principal {
     grid-area: foot;
     background-color: white;
-    
+
 }
-.conteudos
-{
+
+.conteudos {
     display: grid;
     grid-template-columns: 260px 62em;
     grid-template-rows: 8vh minmax(85vh, auto);
@@ -252,8 +246,8 @@
         'side foot'
     ;
 }
-#check:checked ~ .conteudos
-{
+
+#check:checked~.conteudos {
     display: grid;
     grid-template-columns: 75px 265px 1fr;
     grid-template-rows: 8vh minmax(84vh, auto) 1vh;
@@ -264,42 +258,44 @@
     ;
 }
 
-h4{
+h4 {
     color: white;
 }
-.title
-{
+
+.title {
+    color: rgb(0, 0, 0);
     width: 100%;
     align-items: center;
     margin-top: 5px;
     margin-right: 10%;
     height: 5px;
     border-radius: 25px;
-   
-}
-.nav_menu_allPages
-{
-    padding: 20px;
-    width: 60%;
 
 }
-.nav_menu_allPages h5
-{
+
+.nav_menu_allPages {
+    /* padding: 20px;
+    width: 60%; */
+
+}
+
+.nav_menu_allPages h5 {
     margin-bottom: 0;
     margin-left: 70%;
-    
+
     width: 330px;
 
 }
-.tab{
-  overflow-x: scroll;
-  overflow-x: hidden;
-  /* width: 101vh; */
-  height: 230px;
+
+.tab {
+    overflow-x: scroll;
+    overflow-x: hidden;
+    /* width: 101vh; */
+    height: 230px;
 }
 
-.lista_alunos{
-  overflow-x: scroll;
-  overflow-x: hidden;
-  height: 250px;
+.lista_alunos {
+    overflow-x: scroll;
+    overflow-x: hidden;
+    height: 250px;
 }

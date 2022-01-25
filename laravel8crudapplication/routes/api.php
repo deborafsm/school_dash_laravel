@@ -30,5 +30,6 @@ Route::post('/newCurso', [Curso::class, 'addCurso']);
 Route::post('/newMateria', [Materia::class, 'newMateria']);
 Route::get('/getCursos', [Materia::class, 'getCurso']);
 Route::get('/getPrf', [Materia::class, 'getProf']);
+Route::get('/getMaterias', [Materia::class, 'getMateria']);
 Route::get('/getprofCurso', [Materia::class, 'getProfCurso']);
 

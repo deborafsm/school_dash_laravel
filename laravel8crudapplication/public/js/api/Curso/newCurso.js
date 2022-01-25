@@ -4,7 +4,7 @@ const newCurso = () => {
 
     $.ajax({
         method: 'POST',
-        url: "http://127.0.0.1:8000/api/newCurso",
+        url: 'http://127.0.0.1:8000/api/newCurso',
         data: {
             'nome_curso': nome_curso,
             'duracao_sem': duracao_sem
@@ -23,7 +23,7 @@ const newCurso = () => {
                         p.fadeOut();
                     }, 2000)
                 });
-                document.getElementById('nome_aluno').value = '';
+                document.getElementById('nome_curso').value = '';
                 document.getElementById('duracao_sem').value = '';
 
             } else {
@@ -43,4 +43,3 @@ const newCurso = () => {
 
     })
 }
-

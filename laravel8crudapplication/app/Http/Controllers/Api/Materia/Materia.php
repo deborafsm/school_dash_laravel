@@ -102,4 +102,11 @@ class Materia extends Controller
         return json_encode($lista);
 
     }
+
+
+
+    public function getMateria(){
+        $materias = DB::select("SELECT nome_curso FROM curso");
+        return json_encode($materias);
+    }
 }

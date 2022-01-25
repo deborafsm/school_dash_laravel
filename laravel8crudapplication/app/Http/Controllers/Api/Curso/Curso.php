@@ -12,8 +12,6 @@ class Curso extends Controller
 
     public function addCurso(Request $request)
     {
-      
-        $cadastro = DB::transaction(function () use($request) {
             // curso
             $nome_curso = $request->nome_curso;
             $duracao_sem = $request->duracao_sem;
@@ -32,7 +30,7 @@ class Curso extends Controller
             ];
     
             return json_encode($msg);
-        });
+        
 
     }
        

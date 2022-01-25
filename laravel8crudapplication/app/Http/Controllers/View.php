@@ -28,4 +28,7 @@ class View extends Controller
     public function viewListEvento(){
         return view('Dashboard.Evento.listEvents');
     }
+    public function viewMateria(){
+        return view('Dashboard.Materia.materia');
+    }
 }

@@ -24,6 +24,7 @@ Route::get('/listAluno',[View::class, 'viewListAluno'])->name('ads.listAluno');
 Route::get('/curso',[View::class, 'viewCurso'])->name('ads.curso');
 Route::get('/evento', [View::class, 'viewEvento'])->name('ads.evento');
 Route::get('/listevento', [View::class, 'viewListEvento'])->name('ads.listevento');
+Route::get('/materia', [View::class, 'viewMateria'])->name('ads.materia');
 Route::get('/xls', [MakeCsv::class, 'export'])->name('csv');
 // Route::get('/', function () {
 //     return view('index');
