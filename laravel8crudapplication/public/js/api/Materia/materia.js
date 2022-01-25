@@ -1,6 +1,7 @@
 $(function () {
     getCursos()
     getProf()
+  
 })
 
 const newMateria = () => {
@@ -80,3 +81,27 @@ const getProf = () => {
         }
     })
 }
+
+const GetCursoPrf = () => {
+    $.ajax({
+        method: 'GET',
+        url: 'http://127.0.0.1:8000/api/getprofCurso',
+        success: function (e) {
+            var data = JSON.parse(e);
+            $('#prof').empty();
+            $('#prof').append(`<option value="" selected  disabled>Escolha</option>`);
+            data.forEach(function (item, index) {
+                item.forEach(function (item2, index2) {
+                    $('#prof').append(`
+                    <option  id="prof" value="${item2.nome_curso}">${item2.nome_completo}</option>
+                    `)
+                    $('#prof').on('change', function () {
+                        var curso = $('#prof option:selected').val();
+                        $('#nome_curso').val(curso);
+                    });
+                })
+            })
+        }
+    })
+}
+

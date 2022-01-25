@@ -12,11 +12,13 @@
                         <option value="" selected>Escolha</option>
                     </select>
                 </div>
-                <div class="mb-3 col-md-4">
-                    <label for="">Nome do Curso</label>
+                <div class="mb-3 col-md-5">
+                    <label for="">Curso</label>
+                    {{-- <input id="nome_curso" name="nome_curso" class="form-control"> --}}
                     <select id="curso" name="curso" type="text" class="form-control">
                         <option value="" selected>Escolha</option>
                     </select>
+
                 </div>
                 <div class="form-group col-md-6">
                     <label for="">Duração do Curso (semestre):</label>

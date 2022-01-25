@@ -84,4 +84,22 @@ class Materia extends Controller
             return $id = $value;
         }
     }
+
+    public function getProfCurso(Request $request)
+    {
+        $res = DB::select("SELECT 
+        p.nome_completo,
+        c.nome_curso
+        FROM
+        professor p
+        INNER JOIN curso c ON c.id = p.cod_curso");
+
+        foreach ($res as $key)
+        {
+             $lista[] = [$key];
+        }
+        
+        return json_encode($lista);
+
+    }
 }

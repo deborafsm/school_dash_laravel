@@ -23,13 +23,13 @@
                             <label for="telefone_prf">Telefone</label>
                             <input id="telefone_prf" type="text" class="form-control">
                         </div>
-                        <div class="input-field col s6">
-                            <label for="curso_prf">Curso</label>
-                            <input id="curso_prf" type="text" class="form-control">
-                        </div>
+                        <div class="mb-3 col-md-4">
+                            <label for="" >Curso</label>
+                            <select id="curso" name="curso" type="text" class="form-control" >
+                              <option value="" selected disabled>Escolha</option>
+                            </select>
+                          </div>
                     </div>
-                  
-                    
                     <button style="margin-top: 10px;" type="button" class="btn btn-success" onclick="addPrf()">Cadastrar</button>
                 </form>
             </div>

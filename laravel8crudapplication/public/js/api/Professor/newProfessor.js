@@ -1,13 +1,13 @@
-// $(function () {
-//     addPrf();
-// });
+$(function () {
+    getCursos();
+});
 
 function addPrf() {
     let nome_completo_prf = document.getElementById('nome_completo_prf').value;
     let data_nascimento_prf = document.getElementById('data_nascimento_prf').value;
     let matricula_prf = document.getElementById('matricula_prf').value;
     let telefone_prf = document.getElementById('telefone_prf').value;
-    let curso_prf = document.getElementById('curso_prf').value;
+    let curso = document.getElementById('curso').value;
 
     $.ajax({
         method: 'POST',
@@ -17,7 +17,7 @@ function addPrf() {
             'data_nascimento_prf': data_nascimento_prf,
             'matricula_prf': matricula_prf,
             'telefone_prf': telefone_prf,
-            'curso_prf': curso_prf
+            'curso': curso
         },
         success: function (e) {
             let data = JSON.parse(e);
@@ -37,7 +37,7 @@ function addPrf() {
                 document.getElementById('data_nascimento_prf').value = '';
                 document.getElementById('matricula_prf').value = '';
                 document.getElementById('telefone_prf').value = '';
-                document.getElementById('curso_prf').value = '';
+                document.getElementById('curso').value = '';
             } else if (data.status == 0) {
                 var p = $(`<div class="alert1">
                         <span class="closebtn" onclick="this.parentElement.style.display='none';">&times;</span>
@@ -54,5 +54,20 @@ function addPrf() {
             }
         }
 
+    })
+}
+const getCursos = () => {
+    $.ajax({
+        method: 'GET',
+        url: 'http://127.0.0.1:8000/api/getCursos',
+        success: function (e) {
+            var data = JSON.parse(e);
+            data.forEach(function (item, index) {
+                $('#curso').append(`
+                <option value="${item.nome_curso}">${item.nome_curso}</option>
+                `)
+
+            })
+        }
     })
 }
