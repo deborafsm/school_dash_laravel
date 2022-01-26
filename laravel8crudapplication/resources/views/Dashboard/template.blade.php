@@ -131,6 +131,32 @@
                         </a>
                     </li>
                 @endif
+                @if ($current == 'materia')
+                    <li class="nav-item">
+                        <a href="{{ route('ads.materia') }}" class="nav-link">
+                            <span class="link-text">materia</span>
+                        </a>
+                    </li>
+                @else
+                    <li class="nav-item">
+                        <a href="{{ route('ads.materia') }}" class="nav-link">
+                            <span class="link-text">materia</span>
+                        </a>
+                    </li>
+                @endif
+                @if ($current == 'teste')
+                    <li class="nav-item">
+                        <a href="{{ route('ads.teste') }}" class="nav-link">
+                            <span class="link-text">teste</span>
+                        </a>
+                    </li>
+                @else
+                    <li class="teste">
+                        <a href="{{ route('ads.teste') }}" class="nav-link">
+                            <span class="link-text">teste</span>
+                        </a>
+                    </li>
+                @endif
 
                 <li class="nav-item" id="themeButton">
                     <a href="#" class="nav-link">
@@ -165,6 +191,10 @@
                 @endif
                 @if ($current == 'Lista de Eventos')
                     <h5>Evento</h5>
+                    <div class="title"></div>
+                @endif
+                @if ($current == 'teste')
+                    <h5>TESTE</h5>
                     <div class="title"></div>
                 @endif
             </div>

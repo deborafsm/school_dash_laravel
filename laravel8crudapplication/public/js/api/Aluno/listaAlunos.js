@@ -35,42 +35,19 @@ const getAluno = () => {
     })
 }
 
-const allCursos = () => {
-    $.ajax({
-        method: 'GET',
-        url: 'http://127.0.0.1:8000/api/getCursos',
-        success: function (e) {
-            var data = JSON.parse(e);
-            $('#curso').empty();
-            $('#curso').append(`<option value="" selected  disabled>Escolha</option>`);
-            data.forEach(function (item, index) {
-                item.forEach(function (item2, index2) {
-                    $('#curso').append(`
-                <option  id="opt" value="${item2.curso}">${item2.curso}</option>
-                `)
-                })
-            })
-        }
-    })
-}
-
 
 
 const getCurso = () => {
-    $.ajax({
-        method: 'GET',
-        url: 'http://127.0.0.1:8000/api/getCursos',
-        success: function (e) {
-            var data = JSON.parse(e);
-            data.forEach(function (item, index) {
-                $('#curso').append(`
-                <option value="${item.nome_curso}">${item.nome_curso}</option>
-                `)
-
-            })
-        }
-    })
+    fetch(`http://127.0.0.1:8000/api/getCursos`).then((response) => {
+        return response.json();
+    }).then((jsonParsed) => {
+        jsonParsed.forEach(element => {
+            $('#curso').append(`
+            <option value="${element.nome_curso}">${element.nome_curso}</option>`)
+        });
+    });
 }
+
 
 
 $("#curso").on("change", function () {

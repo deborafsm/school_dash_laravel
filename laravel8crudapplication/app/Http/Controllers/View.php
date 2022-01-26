@@ -31,4 +31,7 @@ class View extends Controller
     public function viewMateria(){
         return view('Dashboard.Materia.materia');
     }
+    public function viewTeste(){
+        return view('Dashboard.Teste.teste');
+    }
 }

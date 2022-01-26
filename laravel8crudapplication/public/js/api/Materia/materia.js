@@ -1,7 +1,7 @@
 $(function () {
     getCursos()
     getProf()
-  
+
 })
 
 const newMateria = () => {
@@ -54,33 +54,28 @@ const newMateria = () => {
     })
 }
 const getCursos = () => {
-    $.ajax({
-        method: 'GET',
-        url: 'http://127.0.0.1:8000/api/getCursos',
-        success: function (e) {
-            var data = JSON.parse(e);
-            data.forEach(function (item, index) {
-                $('#curso').append(`
-                <option value="${item.nome_curso}">${item.nome_curso}</option>
-                `)
+    fetch(`http://127.0.0.1:8000/api/getCursos`).then((response) => {
+        return response.json();
+    }).then((jsonParsed) => {
+        jsonParsed.forEach(element => {
+            $('#curso').append(`
+            <option value="${element.nome_curso}">${element.nome_curso}</option>
+            `)
+        });
+    });
+}
 
-            })
-        }
-    })
-}
 const getProf = () => {
-    $.ajax({
-        method: 'GET',
-        url: 'http://127.0.0.1:8000/api/getPrf',
-        success: function (e) {
-            var data = JSON.parse(e);
-            data.forEach(function (item, index) {
-                $('#prof').append(`
-                <option value="${item.nome_completo}">${item.nome_completo}</option>`)
-            })
-        }
-    })
+    fetch(`http://127.0.0.1:8000/api/getPrf`).then((response) => {
+        return response.json();
+    }).then((jsonParsed) => {
+        jsonParsed.forEach(element => {
+            $('#prof').append(`
+            <option value="${element.nome_completo}">${element.nome_completo}</option>`)
+        });
+    });
 }
+
 
 const GetCursoPrf = () => {
     $.ajax({
@@ -104,4 +99,3 @@ const GetCursoPrf = () => {
         }
     })
 }
-

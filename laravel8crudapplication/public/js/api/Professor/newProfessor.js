@@ -1,5 +1,5 @@
 $(function () {
- 
+
 });
 
 function addPrf() {
@@ -7,7 +7,7 @@ function addPrf() {
     let data_nascimento_prf = document.getElementById('data_nascimento_prf').value;
     let matricula_prf = document.getElementById('matricula_prf').value;
     let telefone_prf = document.getElementById('telefone_prf').value;
-    
+
 
     $.ajax({
         method: 'POST',
@@ -17,7 +17,7 @@ function addPrf() {
             'data_nascimento_prf': data_nascimento_prf,
             'matricula_prf': matricula_prf,
             'telefone_prf': telefone_prf,
-            
+
         },
         success: function (e) {
             let data = JSON.parse(e);
@@ -37,7 +37,7 @@ function addPrf() {
                 document.getElementById('data_nascimento_prf').value = '';
                 document.getElementById('matricula_prf').value = '';
                 document.getElementById('telefone_prf').value = '';
-            
+
             } else if (data.status == 0) {
                 var p = $(`<div class="alert1">
                         <span class="closebtn" onclick="this.parentElement.style.display='none';">&times;</span>
@@ -57,17 +57,26 @@ function addPrf() {
     })
 }
 const getCursos = () => {
-    $.ajax({
-        method: 'GET',
-        url: 'http://127.0.0.1:8000/api/getCursos',
-        success: function (e) {
-            var data = JSON.parse(e);
-            data.forEach(function (item, index) {
-                $('#curso').append(`
-                <option value="${item.nome_curso}">${item.nome_curso}</option>
-                `)
-
-            })
-        }
-    })
+    fetch(`http://127.0.0.1:8000/api/getCursos`).then((response) => {
+        return response.json();
+    }).then((jsonParsed) => {
+        jsonParsed.data.results.forEach(element => {
+            $('¨#curso').append(`
+            <option value="${element.nome_curso}">${item.nome_curso}</option>`)
+        });
+    });
 }
+
+// $.ajax({
+//     method: 'GET',
+//     url: '',
+//     success: function (e) {
+//         var data = JSON.parse(e);
+//         data.forEach(function (item, index) {
+//             $('#curso').append(`
+//             <option value="${item.nome_curso}">${item.nome_curso}</option>
+//             `)
+
+//         })
+//     }
+// })
