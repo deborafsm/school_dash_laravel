@@ -1,6 +1,6 @@
 $(function () {
     getCurso();
-
+    $("#cpf_red").hide();
 });
 const newAluno = () => {
     let nome_aluno = document.getElementById('nome_aluno').value;
@@ -58,23 +58,22 @@ const newAluno = () => {
         }
     })
 }
+const consultaCep = () => {
+    $(".progress").show();
+    var numeroCep = document.getElementById("cep").value = ("03883000");
+    fetch(`https://viacep.com.br/ws/` + numeroCep + `/json/`).then((response) => {
+        return response.json();
+    }).then((jsonParsed) => {
+        console.log(jsonParsed)
+        $('#cep').val(`${jsonParsed.cep}`)
+        $('#rua').val(`${jsonParsed.logradouro}`)
+        $('#bairro').val(`${jsonParsed.bairro}`)
+        $('#uf').val(`${jsonParsed.uf}`)
+        $('#cpf_red').show();
+        $('.progress').hide();
+    });
+}
 
-
-// const getCurso = () => {
-//     $.ajax({
-//         method: 'GET',
-//         url: 'http://127.0.0.1:8000/api/getCursos',
-//         success: function (e) {
-//             var data = JSON.parse(e);
-//             data.forEach(function (item, index) {
-//                 $('#curso').append(`
-//                 <option value="${item.nome_curso}">${item.nome_curso}</option>
-//                 `)
-
-//             })
-//         }
-//     })
-// }
 const getCurso = () => {
     fetch(`http://127.0.0.1:8000/api/getCursos`).then((response) => {
         return response.json();

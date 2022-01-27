@@ -37,3 +37,26 @@ const CreateDivHero = (srcImage, heroiName, divtoAppend) => {
 // Time Stamp
 // const timex = Math.floor(Date.now() / 1000)
 // console.log(timex)
+
+
+
+
+// const consultaCep = () => {
+//     $(".progress").show();
+//     var numeroCep = document.getElementById("cep").value;
+//     console.log(numeroCep);
+//     var url = "https://viacep.com.br/ws/" + numeroCep + "/json/";
+//     $.ajax({
+//         url: url,
+//         type: "GET",
+//         success: function (response) {
+//             console.log(response);
+//             $("#cep").val(response.cep);
+//             $("#rua").val(response.logradouro);
+//             $("#bairro").val(response.bairro);
+//             $("#us").val(response.localidade);
+//             $("#cpf_red").show();
+//             $(".progress").hide();
+//         }
+//     })
+// }

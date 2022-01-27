@@ -28,11 +28,36 @@
                         <input id="telefone" name="telefone" type="text" class="form-control">
                     </div>
                     <div class="mb-3 col-md-4">
-                        <label for="" >Curso</label>
-                        <select id="curso" name="curso" type="text" class="form-control" >
-                          <option value="" selected disabled>Escolha</option>
+                        <label for="">Curso</label>
+                        <select id="curso" name="curso" type="text" class="form-control">
+                            <option value="" selected disabled>Escolha</option>
                         </select>
-                      </div>
+                    </div>
+                </div>
+                <hr>
+                <h6>dados pessoais</h6>
+                <div class="row">
+                    <div class="input-field col s6">
+                        <label for="">CEP</label>
+                        <input id="cep" name="cep" type="text" class="cep form-control">
+                        <button type="button" id="buttoncpf" class="btn btn-primary"
+                            onclick="consultaCep()">consultar</button>
+                    </div>
+                </div>
+                <div class="row" id="cpf_red">
+                    <div class="mb-2 col-md-3 ">
+                        <label for="">UF</label>
+                        <input id="uf" name="uf" type="text" class="form-control">
+                    </div>
+                    <div class="input-field col s6">
+                        <label for="">Bairro</label>
+                        <input id="bairro" name="bairro" type="text" class="form-control">
+                    </div>
+                    <div class="input-field col s6">
+                        <label for="">Endereço</label>
+                        <input id="rua" name="rua" type="text" class="form-control">
+                    </div>
+
                 </div>
 
             </div>
@@ -45,12 +70,7 @@
 
 
 
-
-
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
-    <script src="https://rawgit.com/select2/select2/master/dist/js/select2.js"></script>
-
     <script src="{{ asset('js/api/Aluno/newAluno.js') }}"></script>
     <script src="{{ asset('js/api/Curso/listCursos.js') }}"></script>
 
